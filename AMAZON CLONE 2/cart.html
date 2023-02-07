@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon 2.0</title>
+     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+
+     <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.2.0/dist/jdenticon.min.js" async
+     integrity="sha384-yBhgDqxM50qJV5JPdayci8wCfooqvhFYbIKhv0hTtLvfeeyJMJCscRfFNKIxt43M"
+     crossorigin="anonymous">
+     </script>
+     <!-- above script for avatar icon from jdenticon -->
+     <!-- tailwind css  -->
+</head>
+<body>
+  <div class="bg-white w-full ">
+        <!-- background element -->
+       <div class="header h-16 bg-gray-900 flex items-center">
+         <div class="logo w-1/5 h-16 ml-8 pt-3  flex items-center">
+            <!-- logo section width 20% and height 4rem =4*16 pixels  ml-marginleft flex used for horizontal alignment of input within headerwith items center-->
+               <img class="w-28 h-16 object-contain"src="./Images/logo.png">
+               <!-- "."reprents current directory -->
+         </div>
+          <!--input is for search bar  -->
+         <input class="h-9 w-30 bg-gray-800  border-2 border-gray-500 border-opacity-75 rounded-l-xl px-3 text-white ml-6 focus:outline-none placeholder-white" id="search"type="text" placeholder="Search..." >
+         <!-- opacity is transperency, rounded is on left side & xl is curvature width px-padding on x-axis padding is on inside and margin is on outside -->
+         <div class="categories h-9 w-30 bg-gray-800 border border-2 border-gray-500 boder-opacity-75 px-3 text-white flex items-center" >
+           categories
+             <svg xmlns="http://www.w3.org/2000/svg"       fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+         </div>
+         <div class="search-icon h-9 w-10 bg-yellow-500 rounded-r-xl flex justify-center items-center text-white ">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+          <div class="icons text-white flex items-center ml-auto mr-16 w-56 h=16 justify-around ">
+           
+               <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+               </svg>
+            
+              <div class="cart-icon relative h-10 w-10 bg-yellow-500 justify-center flex items-center rounded-xl">
+				<div class="cart-item-number text-gray-800 text-xs absolute -top-1 -right-1 h-4 w-4 bg-white rounded-full flex justify-center items-center ">1</div>
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg> 
+                  
+               </div>
+            
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+               </svg>
+               <svg class="rounded h-12 w-12" data-jdenticon-value="tejas">
+
+               </svg>
+          </div>
+        </div>
+        <div class="main h-screen flex">
+          <div class="border-t-2 border-gray-700 main-sidebar w-1/4 bg-gray-900 p-6">
+            <div class="sidebar-categories">
+               <div class="sidebar-main-category text-yellow-500 cursor-pointer flex font-bold p-2 bg-gray-700 rounded-lg ">
+                <span class="w-8"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                </span>
+                <span>Categories</span>
+               </div> 
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg mt-4">
+                <span class="w-4"> </span>
+                <span>Echo and Alexa</span> 
+               </div>
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg ">
+                <span class="w-4"> </span>
+                <span>Kindle</span> 
+               </div>
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg ">
+                <span class="w-4"> </span>
+                <span>Books</span> 
+               </div>
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg ">
+                <span class="w-4"> </span>
+                <span>Electronics</span> 
+               </div>
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg ">
+                <span class="w-4"> </span>
+                <span>Home and Garden</span> 
+               </div>
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg ">
+                <span class="w-4"> </span>
+                <span>Fashion</span> 
+               </div>
+               <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg mt-3 ">
+                <span class="w-6">
+                  <i class="fas fa-percent"></i>
+                 </span>
+                <span>Sell on Amazon</span>
+              </div>
+              <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg mt-3 ">
+                <span class="w-6">
+                  <i class="fas fa-question-circle"></i>
+                 </span>
+                <span>Help</span>
+              </div>
+              </div>
+          </div>
+          <div class="main-section flex-1 p-5 bg-white">
+               <h1 class="text-3xl font-bold text-gray-400 mb-6">
+				Shopping Cart
+			   </h1>
+			    <div class=" font-bold text-gray-400 table-titles flex ">
+				 <h2 class="flex-grow">
+				 Product
+				 </h2>
+				 <h2 class="w-48">
+				 Count
+				 </h2>
+				 <h2 class="w-48">
+				 Total Cost
+				 </h2>
+				 <span class="w-10"></span>
+			    </div>
+				<div class="cart-items mt-5 ">
+					<div class="cart-item flex items-center  border-b border-gray-100">
+						<div class="cart-item-image w-32 h-24 bg-white p-4  rounded-lg">
+							<img class="w-full h-full object-contain"src="https://cdn1.smartprix.com/rx-iXMsgRkkm-w420-h420/apple-macbook-air-20.webp">
+						</div>
+						<div class="cart-item-details font-bold p-2 flex-grow ">
+						 <div class="cart-item-title text-sm text-gray-600">
+                         Apple MacBook Pro 13,3
+                         </div>
+                         <div class="cart-item-brand text-sm text-gray-400">
+                         Apple
+                         </div>
+						</div>
+						<div class="cart-item-counter w-48 flex items-center">
+							<div class=" left-chevron text-sm text-gray-400 bg-gray-100 rounded w-6 h-6 cursor-pointer flex justify-center items-center hover:bg-gray-200 mr-2">
+								<i class="fas fa-chevron-left fa-xs"></i>
+							</div>	
+							<h4 class="text-gray-400">
+								x1
+							</h4>
+							<div class=" right-chevron
+							 text-sm text-gray-400 bg-gray-100 rounded w-6 h-6 cursor-pointer flex justify-center items-center hover:bg-gray-200 ml-2">
+								<i class="fas fa-chevron-right fa-xs"></i>
+							</div>
+						</div>
+						<div class="cart-item-total-cost w-48 text-gray-400">
+							₹1,86,000 
+							
+	
+						</div>
+						<div class="cart-item-delete
+						 w-10 text-gray-300 font-bold cursor-pointer hover:text-gray-400">
+						 <i class="fas fa-times"></i>
+						</div>
+					</div>
+					<div class="cart-item flex items-center  border-b border-gray-100">
+						<div class="cart-item-image w-32 h-24 bg-white p-4  rounded-lg">
+							<img class="w-full h-full object-contain"src="https://m.media-amazon.com/images/I/41V5KQ500IL.jpg">
+						</div>
+						<div class="cart-item-details font-bold p-2 flex-grow ">
+						 <div class="cart-item-title text-sm text-gray-600">
+                         Nintendo Switch
+                         </div>
+                         <div class="cart-item-brand text-sm text-gray-400">
+                         Nintendo
+                         </div>
+						</div>
+						<div class="cart-item-counter w-48 flex items-center">
+							<div class=" left-chevron text-sm text-gray-400 bg-gray-100 rounded w-6 h-6 cursor-pointer flex justify-center items-center hover:bg-gray-200 mr-2">
+								<i class="fas fa-chevron-left fa-xs"></i>
+							</div>	
+							<h4 class="text-gray-400">
+								x1
+							</h4>
+							<div class=" right-chevron
+							 text-sm text-gray-400 bg-gray-100 rounded w-6 h-6 cursor-pointer flex justify-center items-center hover:bg-gray-200 ml-2">
+								<i class="fas fa-chevron-right fa-xs"></i>
+							</div>
+						</div>
+						<div class="cart-item-total-cost w-48 text-gray-400">
+							₹1,00,000	
+						</div>
+						<div class="cart-item-delete
+						 w-10 text-gray-300 font-bold cursor-pointer hover:text-gray-400">
+						 <i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+				<div class="cart-item-total-cost flex justify-end mt-10">
+					<div class="total-cost mr-7">
+						<h2 class="text-gray-400 font-bold">Total cost</h2>
+						<div class="total-cost-number text-gray-600 font-bold text-3xl">
+							₹2,86,000 
+						</div>
+					</div>
+					<div class="complete-order-buttton w-56 flex items-center justify-center bg-yellow-500 rounded-lg text-white cursor-pointer hover:bg-yellow-600">
+						Complete Order
+					</div>
+
+				</div>
+            </div>
+        </div>
+		
+</body>
+</html>
